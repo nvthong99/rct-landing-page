@@ -1,0 +1,14 @@
+const express = require("express");
+const pageController = require("../controllers/pageController");
+const router = express.Router();
+const userController = require("../controllers/userController");
+const auth = require("../middleware/auth");
+router.post("/login", userController.login);
+router.get("/page", pageController.getPage);
+router.post("/info", pageController.editInfo);
+router.delete("/service/:index", auth, pageController.deleteServiceByIndex);
+router.delete("/project/:index", auth, pageController.deleteProjectByIndex);
+router.post("/service", pageController.addService);
+router.post("/project", pageController.addProject);
+router.get("/admin-check", auth, userController.checkLogin);
+module.exports = router;

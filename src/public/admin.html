@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="container" id="login-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Tên đăng nhập</label
+            >
+            <input
+              name="username"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Mật khẩu</label
+            >
+            <input
+              name="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+
+          <button id="btn-login" class="btn btn-primary">Đăng nhập</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="admin-content">
+      <div class="container mb-5 mt-5">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a id="common" class="nav-link active" aria-current="page" href="#"
+              >Thông tin chung</a
+            >
+          </li>
+          <li class="nav-item">
+            <a id="service-business" class="nav-link" href="#"
+              >Quản lý dịch vụ</a
+            >
+          </li>
+          <li class="nav-item">
+            <a id="project-business" class="nav-link" href="#">Quản lý dự án</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <form
+          id="common-container"
+          action="/info"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-3">
+            <label for="company-name" class="form-label">Tên công ty</label>
+            <input
+              name="companyName"
+              type="text"
+              class="form-control input"
+              id="company-name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Mô tả công ty</label>
+            <textarea
+              name="description"
+              class="form-control input"
+              id="description"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="introduce" class="form-label">Giới thiệu công ty</label>
+            <textarea
+              name="introduce"
+              class="form-control input"
+              id="introduce"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Địa chỉ</label>
+            <input
+              name="address"
+              type="text"
+              class="form-control input"
+              id="address"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input
+              name="phone"
+              type="text"
+              class="form-control input"
+              id="phone"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              name="email"
+              type="text"
+              class="form-control input"
+              id="email"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </form>
+        <div id="service-container">
+          <h5 class="card-title">Danh sách dịch vụ</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Chi tiết</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="table"></tbody>
+          </table>
+
+          <form
+            id="form-service"
+            action="/service"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <h5 class="card-title">Thêm mới dịch vụ dịch vụ</h5>
+            <div class="mb-3">
+              <div class="">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Tên dịch vụ</span
+                  >
+                  <input name="name" type="text" class="form-control" />
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Miêu tả dịch vụ</span
+                  >
+                  <textarea
+                    name="text"
+                    class="form-control"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Ảnh miêu tả dịch vụ</label>
+                  <input name="image" class="form-control" type="file" />
+                </div>
+                <button class="btn btn-primary" id="btn-add-service">
+                  thêm
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="project-container">
+          <h5 class="card-title">Danh sách Dự án</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Chi tiết</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="table-project"></tbody>
+          </table>
+
+          <form
+            id="form-project"
+            action="/project"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <h5 class="card-title">Thêm mới Dự án</h5>
+            <div class="mb-3">
+              <div class="">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Tên dự án</span
+                  >
+                  <input name="name" type="text" class="form-control" />
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Miêu tả dự án</span
+                  >
+                  <textarea
+                    name="text"
+                    class="form-control"
+                    id="introduce"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label"
+                    >Ảnh miêu tả dự án</label
+                  >
+                  <input
+                    name="image"
+                    class="form-control"
+                    type="file"
+                    id="formFile"
+                  />
+                </div>
+                <button class="btn btn-primary">Thêm</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <script src="js/admin.js"></script>
+  </body>
+</html>

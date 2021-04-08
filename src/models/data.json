@@ -1,0 +1,37 @@
+{
+  "companyName": "C",
+  "description": "Phong cách sống đẳng cấp cùng thiên nhiên",
+  "introduce": "Tổng quan Mona Park View – Tên dự án: Mona Park View ( Chung cư Mona Park View ). – Chủ đầu tư dự án: Công ty CP đầu tư Phan Nguyễn. – Vị trí dự án: Ô Đất D32 – ĐTM Cầu Giấy – Yên Hòa – Quận Cầu Giấy – Hà Nội. – Đơn vị thiết kế: Công ty CP kiến trúc và ĐTXD Việt Nam. – Thẩm tra thiết kế: Công ty TNHH MTV Kỹ Thuật xây dựng Việt Nam. – Đơn vị thi công: Công ty CP Đầu tư – Xây dựng Vĩnh Phát. – Tư vấn giám sát: Công ty CP tư vấn đô thị Việt Nam – VinaCity. – Tổng diện tích dự án: 1,6ha. – Diện tích sàn xây dựng: 30.796,94 m2. – Diện tích hầm: 3.424,83 m2. – Diện tích TTTM, văn phòng từ: tầng 1 đến tầng 8 : 1.144,61 m2. – Diện tích sàn căn hộ từ tầng 9 đến tầng 25: 893 m2.",
+  "services": [
+    {
+      "name": "Xây dựng",
+      "text": "Mô tả dịch vụ xây dựng",
+      "fileName": "812a75f9-d4c8-4da5-b00d-f5f1979b9ec1.jpg"
+    },
+    {
+      "name": "Dịch vụ khác",
+      "text": "Mô tả dịch vụ Khác",
+      "fileName": "225cf0c7-754b-4ea6-a8e8-368ea7ff94cf.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Dự án đầu",
+      "text": "Mô tả dự án đầu",
+      "fileName": "221d7ee2-c098-46f7-aea0-ae86487f282a.jpg"
+    },
+    {
+      "name": "Dự án1",
+      "text": "Mô tả dự án đầu",
+      "fileName": "eb9f5c30-dc8c-435e-ab17-b37d04bf1a89.jpg"
+    },
+    {
+      "name": "Dự án2",
+      "text": "Mô tả dự án đầu",
+      "fileName": "7480ba2e-5a86-4f68-9ce3-caa9d18f80a9.jpg"
+    }
+  ],
+  "address": " Dự Án Mona Park View Địa chỉ: 319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM",
+  "phone": "+1 (555) 123-4567",
+  "email": "contact@yourwebsite.com"
+}
